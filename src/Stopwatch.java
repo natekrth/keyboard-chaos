@@ -2,19 +2,19 @@ import java.lang.*;
 
 public class Stopwatch {
     private final long time = 0;
+    long begin;
 
-    public double start() {
-        long begin = System.currentTimeMillis();
+    public void start() {
+        begin = System.currentTimeMillis();
+    }
+
+    public long getBegin() {
         return begin;
     }
 
-    public double elapsedTime() {
-        double start = this.start();
+    public long elapsedTime() {
         long now = System.currentTimeMillis();
-        return (now - start) / 1000.0;
+        return (long) ((now - getBegin()) / 1000.0);
     }
 
-    public static void main(String[] args) {
-
-    }
 }

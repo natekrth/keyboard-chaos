@@ -1,23 +1,22 @@
 public class Command {
-    private char character;
-    private boolean isCorrect;
-    private float time;
+    private Character character;
+    private long time;
 
-    public Command(char character, boolean isCorrect, float time){
+    public Command(Character character, long time){
         this.character = character;
-        this.isCorrect = isCorrect;
         this.time = time;
     }
 
-    public char getCharacter() {
+    public Character getCharacter() {
         return character;
     }
 
-    public boolean getIsCorrect(){
-        return isCorrect;
-    }
 
     public float getTime() {
         return time;
+    }
+
+    public void execute(){
+        // press the keyboard
     }
 }

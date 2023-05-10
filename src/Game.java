@@ -1,11 +1,15 @@
 public class Game {
-    private Word word;
+    private Board word;
     private Setting setting;
+    private Stopwatch stopwatch;
 
     public Game(){
-        word = new Word();
+        word = new Board(5, 20);
         setting = Setting.getInstance();
+        stopwatch = new Stopwatch();
     }
     public void start(){
+        stopwatch.start();
+        // TODO: something here
     };
 }
