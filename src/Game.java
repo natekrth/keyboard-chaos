@@ -11,6 +11,7 @@ public class Game extends Observable {
     protected List<Character> word_generate = new ArrayList<>();
     protected List<String> levelList = List.of("easy", "intermediate", "hard");
     private boolean isPlaying = false;
+    private boolean isReplay = false;
     private int correctWord = 0;
     public float keyPress = 0;
     public int wordPerMinute = 0;
@@ -92,6 +93,13 @@ public class Game extends Observable {
         word_generate.clear();
         index = 0;
         initWordController(setting.getLevel());
+        keyPress = 0;
+        correctWord = 0;
+    }
+
+    public void replayReset() {
+        stopwatch.reset();
+        index = 0;
         keyPress = 0;
         correctWord = 0;
     }

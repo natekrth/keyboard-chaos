@@ -11,7 +11,9 @@ public class Command {
         return character.getaChar();
     }
 
-
+    public Character getWholeCharacter() {
+        return this.character;
+    }
     public double getTime() {
         return time;
     }
